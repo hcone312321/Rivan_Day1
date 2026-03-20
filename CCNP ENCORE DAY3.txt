@@ -1,0 +1,90 @@
+CCNP ENCORE DAY3
+
+TASK1: 5 CCNP LABS:
+
+EXAM COVERS: ospf multi area
+	     BGP
+	     Route Summarization: bgp/ospf/ipv6
+	    2 Labs Random
+
+================================
+
+RoR1: Ping Dikit,
+
+
+RoR2: Route NOT Dikit
+Know the difference bet:
+
+
+CCNP Master Skills:
+EDGEroutes:
+e1/0: 192.168.50.80/27
+e1/1: 10.20.30.49/28
+e1/2: 172.16.20.99/30
+Write to configure: OSPF, EIGRP, BGP:
+
+@OSPF:
+router ospf 1
+network 192.168.50.64 0.0.0.31 area 0
+network 10.20.30.48 0.0.0.15 area 0
+network 172.16.20.96 0.0.0.3 area 0
+
+@BGP
+router 212
+neighbor 1.1.1.1 remote-as 213
+address-family ipv4 
+network 192.168.50.64 mask 255.255.255.224
+network 10.20.30.48 mask 255.255.255.240
+network 172.16.20.96 mask 255.255.255.252
+neighbor 1.1.1.1 activate
+
+@EIGRP
+router eigrp 10
+network 192.168.50.64 0.0.0.31 area 0
+network 10.20.30.48 0.0.0.15 area 0
+network 172.16.20.96 0.0.0.3 area 0
+
+
+
+
+
+========================
+@BGP
+old: 32b vs new:64b
+conf t
+router bgp 1
+bgp log-neighbor-changes
+bgp router-id 1.1.1.1
+nei 208.8.8.4 remote-as 45
+nei 207.7.7.2 remote-as 2
+nei 209.9.9.3 remote-as 3
+address-family ipv4
+nei 208.8.8.4 activate
+nei 207.7.7.2 activate
+nei 209.9.9.3 activate
+
+network 208.8.8.0 mask 255.255.255.0
+network 207.7.7.0 mask 255.255.255.0
+network 209.9.9.0 mask 255.255.255.0
+network 10.1.1.0 mask 255.255.255.252
+
+
+
+
+========================
+
+GOOGLE DNS : ADDED CONFIG
+config t
+router bgp 45
+address-family ipv6
+network 8:8:8:8::8888/128
+network 2001:4860:4860::8888/128
+
+=======
+
+How to aggregate TO OSPF,BGP, EIGRP
+172.16.0.0 /16
+172.17.0.0 /16  === SUMMARY ADRESS 172.16.0.0/14
+172.18.0.0 /16
+
+

@@ -1,0 +1,25 @@
+EVE NG GUI
+rivan
+C1sc0123
+
+208.8.8.187
+VMange - 32897
+Cloud - 32902
+
+admin
+C1sc0123
+
+
+
+SDN / SDWAN
+Management Plane
+Control Plane
+Data Plane
+Orchectration Plane
+
+
+Data Center: APIC
+Enterprise : DNA
+
+User:
+

@@ -1,0 +1,22 @@
+GMAIL:
+hcone312321@gmail.com
+R1v23nams978!@
+
+
+https://github.com/rivancorp/ENCORCLASS
+https://github.com/rivancorp/CCNPent26
+
+
+nmap -v 192.168.103.11
+
+
+RSTHayup 
+root
+C1sc0123
+
+EVE-NG
+rivan
+C1sc0123
+
+CB - 10.22.1.4
+VM_ISE - 10.22.1.8
